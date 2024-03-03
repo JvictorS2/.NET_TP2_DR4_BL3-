@@ -1,0 +1,32 @@
+﻿@page
+@model TP2_.NET.Pages.PessoaModel
+@{
+    ViewData["Title"] = "Pessoa";
+}
+
+<h3>Pessoas Cadastradas: @Model.PessoaLista.Count</h3>
+
+<table class="table" style="color:#fff">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>CPF</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model.PessoaLista)
+        {
+            <tr>
+              
+                
+                 <td>@p.Nome</td>
+                 <td>@p.Idade</td>
+                 <td>@p.CPF</td>
+                
+            </tr>
+        }
+        
+    </tbody>
+
+</table>

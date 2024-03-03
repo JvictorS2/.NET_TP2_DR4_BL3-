@@ -1,0 +1,7 @@
+# Arquivos temporários
+bin/
+obj/
+
+# Diretórios específicos do Visual Studio
+.vscode/
+.vs/
