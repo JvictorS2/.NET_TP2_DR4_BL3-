@@ -17,6 +17,12 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+// Configuração de rotas para páginas Razor e redirecionamento para a página default
+app.MapRazorPages();
+app.MapGet("/", context => {
+    context.Response.Redirect("/Pessoa");
+    return Task.CompletedTask;
+});
 
 app.UseAuthorization();
 
